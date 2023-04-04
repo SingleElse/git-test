@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          <q-btn to="/" label="Quasar App" class="text-subtitle1" unelevated></q-btn>
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -51,10 +51,16 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Vue 기초 문법', // title mixin app.vue -> indexpage.vue로 옮기기
+    caption: 'Vue 핵심가이드',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: '/vue'
+  },
+  {
+    title: 'Shopping List',
+    caption: 'vue 실습 1',
+    icon: 'code',
+    link: '/shop'
   },
   {
     title: 'Github',
@@ -86,6 +92,7 @@ const linksList = [
     icon: 'public',
     link: 'https://facebook.quasar.dev'
   },
+
   {
     title: 'Quasar Awesome',
     caption: 'Community Quasar projects',
