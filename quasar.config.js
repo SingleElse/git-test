@@ -2,11 +2,11 @@ const { configure } = require('quasar/wrappers');
 
 module.exports = configure(function (ctx) {
   return {
-    
+
     supportTS: false,
 
     boot: [
-      
+
       'axios',
     ],
 
@@ -17,31 +17,31 @@ module.exports = configure(function (ctx) {
     extras: [
 
 
-      'roboto-font', 
-      'material-icons', 
+      'roboto-font',
+      'material-icons',
     ],
 
     build: {
-      vueRouterMode: 'history', 
+      vueRouterMode: 'history',
 
-      
+
       chainWebpack (/* chain */) {}
-      
+
     },
 
-    
+
     devServer: {
       server: {
         type: 'http'
       },
       port: 8080,
-      open: true 
+      open: true
     },
 
     framework: {
       config: {},
 
-      plugins: []
+      plugins: ['Dialog', 'Notify']
     },
 
     // animations: 'all', // --- includes all animations
@@ -61,9 +61,9 @@ module.exports = configure(function (ctx) {
       maxAge: 1000 * 60 * 60 * 24 * 30,
         // Tell browser when a file from the server should expire from cache (in ms)
 
-      
+
       chainWebpackWebserver (/* chain */) {},
-      
+
 
       middlewares: [
         ctx.prod ? 'compression' : '',
@@ -78,9 +78,9 @@ module.exports = configure(function (ctx) {
 
       // for the custom service worker ONLY (/src-pwa/custom-service-worker.[js|ts])
       // if using workbox in InjectManifest mode
-      
+
       chainWebpackCustomSW (/* chain */) {},
-      
+
 
       manifest: {
         name: `Quasar App`,
@@ -154,13 +154,13 @@ module.exports = configure(function (ctx) {
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
-      
-      chainWebpackMain (/* chain */) {},
-      
 
-      
+      chainWebpackMain (/* chain */) {},
+
+
+
       chainWebpackPreload (/* chain */) {},
-      
+
     }
   }
 });
