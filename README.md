@@ -1,6 +1,6 @@
 # Quasar App (quasar-vue)
 
-A Quasar Project
+내 음식 리스트를 확인해보세요!
 
 ## Install the dependencies
 ```bash
